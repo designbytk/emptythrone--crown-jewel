@@ -137,16 +137,22 @@ header .bar {
 }
 
 header .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
+  background: linear-gradient(to bottom, transparent 0% calc(60% - 2px), var(--line) calc(60% - 2px) 60%, transparent 60% 100%);
 }
 
 header .brand a {
   display: inline-block;
   text-decoration: none;
+  background-color: var(--paper);
+  padding-inline: 2rem;
 }
 
 header .brand svg {
-  width: 148px;
+  width: 14rem;
   height: auto;
   fill: var(--ink);
 }
