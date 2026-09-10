@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PostMeta from "../../components/PostMeta.astro";
+import { getAllPosts } from "../../lib/posts";
+
+export function getStaticPaths() {
+  return getAllPosts()
+    .filter((post) => post.kind !== "link")
+    .map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+---
+
+<BaseLayout title={`${post.title} — Emptythrone`} description={post.dek}>
+  <Header />
+  <main>
+    <article class="post">
+      <a class="back" href="/">← Back to Emptythrone</a>
+      <h1>{post.title}</h1>
+      <PostMeta post={post} />
+      <p class="dek">{post.dek}</p>
+      <div class="body">
+        {post.body?.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <p class="stub">
+        This entry is still being written up in full. Come back later, or
+        subscribe by RSS to hear when it's finished.
+      </p>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

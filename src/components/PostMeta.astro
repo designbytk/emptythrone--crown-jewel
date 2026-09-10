@@ -1,0 +1,26 @@
+---
+import Mark from "./Mark.astro";
+import { formatDate } from "../lib/format";
+import type { Post } from "../lib/posts";
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+
+const kindLabel: Record<Post["kind"], string> = {
+  essay: "Essay",
+  note: "Note",
+  link: "Link",
+};
+
+const source = post.kind === "link" ? new URL(post.href!).hostname.replace(/^www\./, "") : null;
+---
+
+<p class="meta">
+  <Mark />
+  <span class="kind">{kindLabel[post.kind]}</span>
+  <time datetime={post.date}>{formatDate(post.date)}</time>
+  {source ? <span>{source}</span> : <span>{post.readingTime} min read</span>}
+</p>

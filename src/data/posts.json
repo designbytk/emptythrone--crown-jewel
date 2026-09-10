@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "the-architecture-of-waiting-rooms",
+    "title": "The Architecture of Waiting Rooms",
+    "kind": "essay",
+    "date": "2026-09-08",
+    "dek": "Airports, hospitals, motor vehicle offices — the rooms we build for people who are, by design, doing nothing. A short study of the furniture of delay.",
+    "body": [
+      "There is a particular chair, bolted in a row of five, upholstered in a color that exists nowhere else in the visible world. You have sat in it. It was designed by someone who was told, explicitly, that comfort past twenty minutes was not a requirement worth solving for.",
+      "Waiting rooms are the only interiors built around an absence — the person who isn't ready for you yet. Everything in them is a negotiation with that absence: the clock placed where you'll see it but can't quite read the second hand, the magazines eighteen months out of date, the hush that isn't quite silence.",
+      "What's strange is how consistent the vocabulary is, across continents and institutions that share no history. Somewhere, a design decision was made once and never revisited, and now it just is how a waiting room looks. I want to find that first room."
+    ]
+  },
+  {
+    "slug": "public-notebook",
+    "title": "On Keeping a Public Notebook",
+    "kind": "note",
+    "date": "2026-08-27",
+    "dek": "Why this site exists, what it will and won't be, and a small promise about how often I'll update it.",
+    "body": [
+      "This is a notebook, not a publication. There's no editorial calendar, no beat, no obligation to have a take on the news. Some entries will be long. Most won't. A few will just be a link to something I couldn't stop thinking about.",
+      "The promise is modest: nothing here is written to perform expertise I don't have. If I'm wrong about something, I'd rather find out from you than pretend otherwise."
+    ]
+  },
+  {
+    "slug": "atlas-of-imaginary-countries",
+    "title": "An Atlas of Countries That Never Existed",
+    "kind": "link",
+    "date": "2026-08-19",
+    "dek": "A cartographer spent a decade mapping nations from fiction, propaganda, and failed treaties. The maps are gorgeous and slightly unsettling.",
+    "href": "https://example.com/atlas-of-imaginary-countries"
+  },
+  {
+    "slug": "interfaces-without-users",
+    "title": "Interfaces Without Users",
+    "kind": "essay",
+    "date": "2026-08-05",
+    "dek": "Most of the software running today was never meant to be seen. Notes on designing for an audience of other machines.",
+    "body": [
+      "The average interface now has a readership of one program and, if something goes wrong, one tired engineer at 2 a.m. Everyone else in the chain is a machine that will never notice whether the labels are kind.",
+      "And yet the good ones are still legible — not to be nice, but because legibility is what lets a human step in without dread when the automated version finally breaks. Designing for machines is still designing for the night someone has to read it by hand."
+    ]
+  },
+  {
+    "slug": "three-days-rotary-phone",
+    "title": "Three Days With a Rotary Phone",
+    "kind": "note",
+    "date": "2026-07-22",
+    "dek": "I disconnected the smartphone and lived off a 1974 rotary set for a long weekend. Some notes on friction as a feature.",
+    "body": [
+      "Dialing seven digits by hand takes about four seconds — long enough to reconsider the call twice. I didn't expect that pause to be the whole point, but by Saturday it was the only part I missed when I plugged the smartphone back in."
+    ]
+  },
+  {
+    "slug": "last-lighthouse-keepers",
+    "title": "The Last Lighthouse Keepers",
+    "kind": "link",
+    "date": "2026-07-11",
+    "dek": "A quiet, beautifully reported piece on the handful of people still paid to live beside automated lights, just in case.",
+    "href": "https://example.com/last-lighthouse-keepers"
+  },
+  {
+    "slug": "a-taxonomy-of-empty-chairs",
+    "title": "A Taxonomy of Empty Chairs",
+    "kind": "essay",
+    "date": "2026-06-30",
+    "dek": "Boardrooms, courtrooms, thrones: what a room communicates through a chair nobody is sitting in.",
+    "body": [
+      "An empty chair at the head of a table is never neutral. It's a held position, a placeholder for a decision not yet made about who gets to make decisions — and everyone in the room orients around it whether they mean to or not.",
+      "Courtrooms formalize this into ritual: you stand for the entrance of no one, because the bench itself outranks whoever will eventually sit in it. The chair was never the point. The waiting was."
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PostMeta from "../components/PostMeta.astro";
+import ArchiveList from "../components/ArchiveList.astro";
+import {
+  getFeaturedPost,
+  getSecondaryPosts,
+  getArchivePosts,
+} from "../lib/posts";
+
+const featured = getFeaturedPost();
+const secondary = getSecondaryPosts(2);
+const archive = getArchivePosts(3);
+---
+
+<BaseLayout
+  title="Emptythrone"
+  description="A personal record of essays, notes, and things worth keeping."
+>
+  <h1 class="visually-hidden">Emptythrone — essays, notes, and links</h1>
+  <Header />
+
+  <main>
+    <div class="hero">
+      <article class="lead">
+        <h2><a href={featured.url}>{featured.title}</a></h2>
+        <p class="dek">{featured.dek}</p>
+        <PostMeta post={featured} />
+      </article>
+
+      <aside class="rail" aria-label="Also recent">
+        <p class="rail-label">Also recent</p>
+        {
+          secondary.map((post) => (
+            <article>
+              <h3>
+                <a href={post.url}>{post.title}</a>
+              </h3>
+              <PostMeta post={post} />
+            </article>
+          ))
+        }
+      </aside>
+    </div>
+
+    <ArchiveList
+      heading="Archive"
+      description="Everything else, oldest last."
+      posts={archive}
+    />
+  </main>
+
+  <Footer />
+</BaseLayout>

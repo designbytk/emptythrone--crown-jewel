@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout
+  title="About — Emptythrone"
+  description="What this site is, and who's writing it."
+>
+  <Header />
+  <main>
+    <article class="post">
+      <h1>About</h1>
+      <div class="body">
+        <p>
+          Emptythrone is a personal notebook — essays, short notes, and
+          links to things elsewhere that were worth the time. There's no
+          topic it's obligated to cover and no schedule it owes anyone.
+        </p>
+        <p>
+          It updates when there's something worth writing down, which is
+          irregular by design. If you want to know when that happens,
+          the RSS feed is the honest way to find out.
+        </p>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

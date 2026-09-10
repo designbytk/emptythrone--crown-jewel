@@ -1,0 +1,31 @@
+---
+import PostMeta from "./PostMeta.astro";
+import type { Post } from "../lib/posts";
+
+interface Props {
+  heading: string;
+  description?: string;
+  posts: Post[];
+}
+
+const { heading, description, posts } = Astro.props;
+---
+
+<section class="archive" aria-label={heading}>
+  <div class="section-head">
+    <h2>{heading}</h2>
+    {description && <p>{description}</p>}
+  </div>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <a href={post.url}>
+            <h3>{post.title}</h3>
+            <PostMeta post={post} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
