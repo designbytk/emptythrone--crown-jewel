@@ -27,3 +27,6 @@ assets/
 # AI
 CLAUDE.md
 AGENTS.md
+
+# PNPM
+.pnpm-store/
