@@ -38,11 +38,6 @@ function hydrate(post: RawPost): Post {
   };
 }
 
-/**
- * The site's content source. Swapping this JSON import for a fetch()
- * against a real API only requires changing this one line — every
- * caller below already works against the typed `Post` shape.
- */
 const posts: Post[] = (rawPosts as RawPost[])
   .map(hydrate)
   .sort((a, b) => b.date.localeCompare(a.date));

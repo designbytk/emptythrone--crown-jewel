@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import PostMeta from "../../components/PostMeta.astro";
 import { getAllPosts } from "../../lib/posts";
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   return getAllPosts()
     .filter((post) => post.kind !== "link")
     .map((post) => ({ params: { slug: post.slug }, props: { post } }));

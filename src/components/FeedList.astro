@@ -1,0 +1,33 @@
+---
+import { formatDate } from "../lib/format";
+import type { FeedPost } from "../lib/feed";
+
+interface Props {
+  posts: FeedPost[];
+}
+
+const { posts } = Astro.props;
+---
+
+{posts.length > 0 && (
+  <section class="feed-list" aria-labelledby="feed-heading">
+    <div class="section-head">
+      <h2 id="feed-heading">From the desk</h2>
+      <p>Recent writing from deskoftk.fyi.</p>
+    </div>
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <a href={post.href} rel="external">
+            <img src={post.image} alt="" loading="lazy" />
+            <span class="feed-copy">
+              <h3>{post.title}</h3>
+              <p>{post.dek}</p>
+              <time datetime={post.date}>{formatDate(post.date)}</time>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
