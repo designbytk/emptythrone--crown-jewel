@@ -71,7 +71,12 @@ function parseFeed(xml: string): FeedPost[] {
 
 export async function getFeedPosts(): Promise<FeedPost[]> {
   try {
-    const response = await fetch(FEED_URL);
+    const response = await fetch(FEED_URL, {
+      headers: {
+        Accept: "application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.8",
+        "User-Agent": "emptythrone-feed/1.0 (+https://emptythrone.viatk.com)",
+      },
+    });
     if (!response.ok) throw new Error(`Feed returned ${response.status}`);
 
     const posts = parseFeed(await response.text());
