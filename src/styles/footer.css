@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------------- */
+/* Footer                                                             */
+/* ---------------------------------------------------------------- */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer .colophon {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+footer .colophon .mark {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.3;
+}
+
+footer nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+footer nav a:hover,
+footer nav a:focus-visible {
+  color: var(--accent);
+}

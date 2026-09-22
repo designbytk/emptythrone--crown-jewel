@@ -1,0 +1,11 @@
+/* ---------------------------------------------------------------- */
+/* Layout shell                                                      */
+/* ---------------------------------------------------------------- */
+
+header,
+main,
+footer {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--edge);
+}

@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------- */
+/* Post permalink page                                               */
+/* ---------------------------------------------------------------- */
+
+.post {
+  padding-block: 3.25rem 5rem;
+  max-width: 70ch;
+}
+
+.post .back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.post .back:hover,
+.post .back:focus-visible {
+  color: var(--accent);
+}
+
+.post h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 2vw + 1.5rem, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.post .meta {
+  margin-top: 1.25rem;
+}
+
+.post .dek {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: var(--measure);
+}
+
+.post .body {
+  margin-top: 2.25rem;
+  max-width: var(--measure);
+}
+
+.post .body p {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.post .body p + p {
+  margin-top: 1.25rem;
+}
+
+.post .stub {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}

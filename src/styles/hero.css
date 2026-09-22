@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------- */
+/* Hero: lead post + aside rail                                      */
+/* ---------------------------------------------------------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  gap: 3.5rem;
+  padding-block: 3.25rem 3.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.lead h2 {
+  max-width: 18ch;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 2.4vw + 1.75rem, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.lead h2 a {
+  text-decoration: none;
+}
+
+.lead h2 a:hover,
+.lead h2 a:focus-visible {
+  color: var(--accent);
+}
+
+.lead .dek {
+  max-width: var(--measure);
+  margin-top: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.lead .meta {
+  margin-top: 1.5rem;
+}

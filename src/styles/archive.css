@@ -1,0 +1,66 @@
+/* ---------------------------------------------------------------- */
+/* Archive section                                                   */
+/* ---------------------------------------------------------------- */
+
+.archive {
+  padding-top: 3.25rem;
+  padding-bottom: 4rem;
+}
+
+.archive .section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.archive h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.archive .section-head p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.archive ul {
+  margin-top: 0.5rem;
+}
+
+.archive li {
+  border-top: 1px solid var(--line);
+}
+
+.archive li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.archive a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.1rem;
+  text-decoration: none;
+}
+
+.archive a:hover h3,
+.archive a:focus-visible h3 {
+  color: var(--accent);
+}
+
+.archive h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+.archive .meta {
+  flex-shrink: 0;
+}
