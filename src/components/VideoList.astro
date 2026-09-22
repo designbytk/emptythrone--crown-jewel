@@ -1,0 +1,33 @@
+---
+import { formatDate } from "../lib/format";
+import type { VideoItem } from "../lib/youtube";
+
+interface Props {
+  videos: VideoItem[];
+}
+
+const { videos } = Astro.props;
+---
+
+{videos.length > 0 && (
+  <section class="video-list" aria-labelledby="video-heading">
+    <div class="section-head">
+      <h2 id="video-heading">Watching</h2>
+      <p>Recent picks from a public YouTube playlist.</p>
+    </div>
+    <ul>
+      {videos.map((video) => (
+        <li>
+          <a href={video.href} rel="external noopener" target="_blank">
+            <img src={video.thumbnail} alt="" loading="lazy" />
+            <span class="video-copy">
+              <h3>{video.title}</h3>
+              <p>{video.channel}</p>
+              <time datetime={video.date}>{formatDate(video.date)}</time>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

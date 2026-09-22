@@ -5,7 +5,9 @@ import Footer from "../components/Footer.astro";
 import PostMeta from "../components/PostMeta.astro";
 import ArchiveList from "../components/ArchiveList.astro";
 import FeedList from "../components/FeedList.astro";
+import VideoList from "../components/VideoList.astro";
 import { getFeedPosts } from "../lib/feed";
+import { getPlaylistVideos } from "../lib/youtube";
 import {
   getFeaturedPost,
   getSecondaryPosts,
@@ -16,6 +18,7 @@ const featured = getFeaturedPost();
 const secondary = getSecondaryPosts(2);
 const archive = getArchivePosts(3);
 const feedPosts = await getFeedPosts();
+const videos = await getPlaylistVideos();
 ---
 
 <BaseLayout
@@ -55,6 +58,8 @@ const feedPosts = await getFeedPosts();
     />
 
     <FeedList posts={feedPosts} />
+
+    <VideoList videos={videos} />
   </main>
 
   <Footer />
